@@ -27,29 +27,28 @@
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
-	<header class="site-header" role="banner">
-		<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle() ?>>
-			<div class="title-bar-left">
-				<button class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
-				<span class="site-mobile-title title-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				</span>
-			</div>
-		</div>
-		<nav class="site-navigation top-bar" role="navigation">
-			<div class="top-bar-left">
-				<div class="site-desktop-title top-bar-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				</div>
-			</div>
-			<div class="top-bar-right">
-				<?php foundationpress_top_bar_r(); ?>
+	<header class="topheader">
+		<hr>
+			<img src="wp-content/themes/elcoop/assets/images/logo.png" alt="<?php bloginfo ?>" class="logocoop">
+			<a href="#" class="menu">
+				<img src="wp-content/themes/elcoop/assets/images/menu.png" alt="" >
+			</a>
+			<a href="#"><img src="wp-content/themes/elcoop/assets/images/france.png" alt="" class="france"></a>
+			<a href="#"><img src="wp-content/themes/elcoop/assets/images/anglais.png" alt="" class="anglais"></a>
 
-				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) === 'topbar' ) : ?>
-					<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
-				<?php endif; ?>
-			</div>
-		</nav>
+
+			<nav>
+				<a href="#" class="close" ><img src="wp-content/themes/elcoop/assets/images/cross.png" alt="" ></a>
+				<ul>
+					<a href="#"><li>Accueil</li></a>
+					<a href="#"><li>Agenda</li></a>
+					<a href="#"><li>Infrastructures</li></a>
+					<a href="#"><li>FabLab</li></a>
+					<a href="#"><li>Articles</li></a>
+					<a href="#"><li>Contact</li></a>
+				</ul>
+			</nav>
+
 	</header>
 
 	<section class="container">
